@@ -1,0 +1,110 @@
+.browse-breadcrumbs {
+    margin-bottom: 1rem;
+    color: #475569;
+    font-size: .875rem;
+}
+
+.browse-breadcrumbs ol,
+.browse-breadcrumbs li,
+.browse-tags,
+.browse-cities {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: .5rem;
+    overflow-wrap: anywhere;
+}
+
+.browse-layout {
+    display: grid;
+    align-items: start;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+}
+
+.browse-results {
+    min-width: 0;
+    container-type: inline-size;
+}
+
+.browse-filters,
+.browse-category-grid a {
+    border: 1px solid #e2e8f0;
+    border-radius: .85rem;
+    background: var(--color-market-surface);
+}
+
+.browse-filters summary {
+    padding: .9rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.browse-filters form {
+    display: grid;
+    gap: .85rem;
+    padding: 0 1rem 1rem;
+}
+
+.browse-filters [data-browse-status]:empty { display: none; }
+.browse-tags { margin-bottom: 1rem; }
+
+.browse-tags li,
+.browse-cities a {
+    display: inline-block;
+    border-radius: .55rem;
+    padding: .35rem .65rem;
+    background: #e7f3f1;
+    color: #115e59;
+    font-size: .875rem;
+}
+
+.browse-cities a {
+    padding: .6rem .85rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.browse-category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 8.75rem), 1fr));
+    gap: .75rem;
+}
+
+.browse-category-grid a {
+    display: flex;
+    align-items: center;
+    min-height: 3.5rem;
+    padding: .75rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    height: 100%;
+}
+
+.browse-category-grid a:hover,
+.browse-cities a:hover {
+    background: #ccfbf1;
+    color: #115e59;
+}
+
+@media (min-width: 54rem) {
+    .browse-layout { grid-template-columns: 15rem minmax(0, 1fr); }
+    .browse-filters form { padding-top: .25rem; }
+}
+
+.browse-search-summary { margin-bottom: 1rem; overflow-wrap: anywhere; }
+.browse-search-summary a { margin-left: .4rem; }
+.browse-price-range { min-inline-size: 0; }
+.browse-price-range legend { padding: 0; margin-bottom: .4rem; font-weight: 700; }
+.browse-price-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: .5rem; }
+.browse-price-fields label { white-space: nowrap; }
+.browse-price-fields input { height: 2.75rem; }
+.browse-filter-actions { display: grid; gap: .5rem; }
+.browse-filter-actions .market-button-secondary {
+    border-color: var(--color-market-primary);
+    color: var(--market-hover);
+}
+.browse-filter-actions .market-button-secondary:hover { background: var(--market-tint); }
+.browse-cities a { display: inline-flex; align-items: center; gap: .25rem; }
+.browse-category-grid a { gap: .6rem; }
+.browse-category-grid a span { display: grid; flex: none; place-items: center; width: 2.1rem; height: 2.1rem; border-radius: .5rem; background: var(--market-tint); color: var(--market-hover); }
